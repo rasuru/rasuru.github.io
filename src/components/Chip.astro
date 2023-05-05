@@ -1,0 +1,22 @@
+---
+import classNames from "classnames";
+
+interface Props {
+  label: string;
+  class?: string;
+  as?: keyof JSX.IntrinsicElements;
+}
+
+const { as, label } = Astro.props;
+const Element = as ?? "div";
+---
+
+<Element
+  class={classNames(
+    "rounded px-1.5 py-0.5 bg-indigo-400 bg-opacity-20 whitespace-nowrap cursor-default",
+    Astro.props["class"]
+  )}
+>
+  <slot name="leading" />
+  <span class="align-middle">{label}</span>
+</Element>

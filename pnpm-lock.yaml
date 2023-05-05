@@ -3,9 +3,11 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/react': ^2.1.1
   '@astrojs/tailwind': ^3.1.1
+  '@heroicons/react': ^2.0.17
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^2.3.2
+  classnames: ^2.3.2
   react: ^18.0.0
   react-dom: ^18.0.0
   tailwindcss: ^3.0.24
@@ -13,9 +15,11 @@ specifiers:
 dependencies:
   '@astrojs/react': 2.1.1_eifcttp3urtuoaozkvkishqkgm
   '@astrojs/tailwind': 3.1.1_7yagnyihytht5lrkztaywulbna
+  '@heroicons/react': 2.0.17_react@18.2.0
   '@types/react': 18.2.0
   '@types/react-dom': 18.2.1
   astro: 2.3.2
+  classnames: 2.3.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tailwindcss: 3.3.2
@@ -593,6 +597,14 @@ packages:
     dev: false
     optional: true
 
+  /@heroicons/react/2.0.17_react@18.2.0:
+    resolution: {integrity: sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@jridgewell/gen-mapping/0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
     engines: {node: '>=6.0.0'}
@@ -1092,6 +1104,10 @@ packages:
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /cli-boxes/3.0.0:

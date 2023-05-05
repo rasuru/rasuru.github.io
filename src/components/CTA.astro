@@ -1,0 +1,43 @@
+<a
+  href="/#contact"
+  class="relative inline-block w-40 text-center text-xl py-2.5 align-middle text-white font-bold ml-auto transition-all"
+>
+  <span class="relative z-[1]">Contact</span>
+  <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+    <path
+      d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"
+    ></path>
+  </svg>
+</a>
+
+<style>
+  a {
+    --bg-color: #483fca;
+  }
+
+  a:hover {
+    --bg-color: #36e0e3;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px var(--bg-color), 0 0 300px var(--bg-color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  }
+
+  svg {
+    fill: var(--bg-color);
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+  }
+
+  path {
+    transition: 300ms;
+  }
+
+  a:hover path {
+    d: path(
+      "M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0"
+    );
+  }
+</style>

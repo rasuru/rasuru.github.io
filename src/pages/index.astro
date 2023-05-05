@@ -1,81 +1,185 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import PageTitle from "../components/PageTitle.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import PageSubtitle from "../components/PageSubtitle.astro";
+import CTA from "../components/CTA.astro";
+import { GitHubLogo } from "../components/GitHubLogo";
+import {
+  ArrowTopRightOnSquareIcon,
+  AtSymbolIcon,
+} from "@heroicons/react/24/outline";
+import Chip from "../components/Chip.astro";
+import TypeScriptLogo from "../components/TypeScriptLogo.astro";
+import TailwindCSSLogo from "../components/TailwindCSSLogo.astro";
+import TelegramLogo from "../components/TelegramLogo.astro";
+import ReactLogo from "../components/ReactLogo.astro";
+
+const emailAddress = "rasuru@protonmail.com";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Rasul Temirzhan">
+  <Header />
+  <PageTitle class="mt-32">
+    <div>Hi. I'm Rasul.</div>
+    A Front-end Developer.
+  </PageTitle>
+  <PageSubtitle>
+    I'm passionate about building user interfaces and scaleable systems.
+  </PageSubtitle>
+  <div class="text-center mt-12">
+    <CTA />
+  </div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <div class="mt-32 mb-20 max-w-screen-lg mx-auto">
+    <div class="mb-2 xs:mb-4">
+      <h2
+        class="inline align-baseline font-heading text-xl xs:text-3xl text-indigo-300"
+      >
+        granular
+      </h2>
+      <span
+        class="align-baseline mb-1 text-sm xs:text-base transition-[font-size] before:content-['//'] before:mr-1 text-indigo-400"
+      >
+        task manager
+      </span>
+    </div>
+
+    <div class="lg:flex">
+      <div class="flex-shrink-0 lg:pr-8">
+        <div class="mb-8">
+          <a
+            href="https://github.com/granular-app/granular-app.github.io"
+            class="text-sm mr-2 inline-block px-4 bg-indigo-600 bg-opacity-40 rounded text-center py-2 font-medium transition-colors hover:bg-opacity-60"
+          >
+            <GitHubLogo
+              className="md:h-5 md:w-5 h-6 w-6 mr-2 inline align-middle"
+            />
+            <span class="align-middle">View on GitHub</span>
+          </a>
+          <a
+            href="https://granular-app.github.io"
+            class="text-sm inline-block px-4 bg-indigo-600 bg-opacity-40 rounded text-center py-2 font-medium transition-colors hover:bg-opacity-60"
+          >
+            <ArrowTopRightOnSquareIcon
+              className="align-middle inline md:h-4 md:w-4 h-5 w-5 mr-2"
+            />
+            <span class="align-middle">Open app</span>
+          </a>
+        </div>
+
+        <a href="https://granular-app.github.io">
+          <img
+            src="/assets/granular-main-board-screenshot.png"
+            class="rounded-lg mb-8 shadow-lg brightness-90 hover:brightness-100 transition-[filter] w-full lg:max-w-screen-sm"
+          />
+        </a>
+      </div>
+
+      <div class="text-sm md:text-base">
+        <div class="mb-6 lg:mb-8">
+          <div class="font-medium text-indigo-300 mb-1">Timeline</div>
+          <div>March 2023 - Present</div>
+        </div>
+        <div class="mb-6 lg:mb-8">
+          <div class="font-medium text-indigo-300 mb-1">Tooling</div>
+          <ul class="flex flex-wrap gap-2">
+            <Chip label="React" as="li">
+              <ReactLogo
+                class="h-5 w-5 mr-1 p-px inline align-middle"
+                slot="leading"
+              />
+            </Chip>
+            <Chip label="TypeScript" as="li">
+              <TypeScriptLogo
+                class="h-5 w-5 mr-1 p-0.5 inline align-middle"
+                slot="leading"
+              />
+            </Chip>
+            <Chip label="TailwindCSS" as="li">
+              <TailwindCSSLogo
+                class="h-5 w-5 mr-1 inline align-middle"
+                slot="leading"
+              />
+            </Chip>
+            <Chip label="React Router" as="li" />
+            <Chip label="Vite" as="li" />
+            <Chip label="pnpm" as="li" />
+            <Chip label="GitHub Actions" as="li" />
+          </ul>
+        </div>
+        <div class="mb-6 lg:mb-8">
+          <div class="font-medium text-indigo-300 mb-1">Approaches</div>
+          <ul class="flex flex-wrap gap-2">
+            <li
+              class="rounded text-indigo-200 px-1.5 py-0.5 bg-indigo-400 bg-opacity-20 whitespace-nowrap cursor-default"
+            >
+              Clean Architecture
+            </li>
+            <li
+              class="rounded text-indigo-200 px-1.5 py-0.5 bg-indigo-400 bg-opacity-20 whitespace-nowrap cursor-default"
+            >
+              Agile
+            </li>
+            <li
+              class="rounded text-indigo-200 px-1.5 py-0.5 bg-indigo-400 bg-opacity-20 whitespace-nowrap cursor-default"
+            >
+              Reactive Programming
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="mt-20">
+      <h2 class="font-heading text-xl xs:text-3xl text-indigo-300 mb-5">
+        Contact
+      </h2>
+
+      <p class="mb-4">
+        My email address is <a
+          class="underline hover:text-indigo-100"
+          href=`mailto://${emailAddress}`>{emailAddress}</a
+        >.
+      </p>
+
+      <div class="sm:flex sm:space-x-4 space-y-4 sm:space-y-0">
+        <a
+          href="mailto://rasuru@protonmail.com"
+          class="text-center flex-grow flex-shrink-0 block px-2 py-4 md:p-8 bg-indigo-600 rounded-md md:text-xl font-medium hover:bg-indigo-500 transition-colors"
+        >
+          <AtSymbolIcon
+            className="h-6 w-6 md:h-12 md:w-12 mr-2 md:mr-4 inline text-indigo-300"
+          />
+          Send an email
+        </a>
+        <a
+          href="https://t.me/rasuru"
+          class="text-center flex-grow flex-shrink-0 block px-2 py-4 md:p-8 bg-indigo-600 bg-opacity-40 rounded-md md:text-xl hover:bg-opacity-60 transition-colors"
+        >
+          <TelegramLogo
+            class="h-6 w-6 md:h-12 md:w-12 mr-2 md:mr-4 inline text-indigo-300"
+          />
+          Chat in Telegram
+        </a>
+      </div>
+    </div>
+
+    <footer class="mt-32 md:flex">
+      <div class="mb-4 flex-grow">&copy; 2023 Rasul Temirzhan</div>
+      <section class="flex-shrink-0 max-w-xs w-full">
+        <h3 class="font-bold font-heading mb-2 text-indigo-300">Links</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/rasuru">
+              <GitHubLogo
+                className="h-5 w-5 mr-2 inline align-middle text-indigo-300"
+              />
+              <span class="align-middle">GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </div>
+</Layout>

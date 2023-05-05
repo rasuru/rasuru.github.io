@@ -1,0 +1,16 @@
+---
+import classNames from "classnames";
+
+export interface Props {
+  class?: string;
+}
+---
+
+<h1
+  class={classNames(
+    "font-extrabold text-indigo-300 text-2xl xs:text-4xl sm:text-5xl md:6-xl lg:text-7xl text-center font-heading mx-auto mb-5 transition-[font-size]",
+    Astro.props.class
+  )}
+>
+  <slot />
+</h1>

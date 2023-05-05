@@ -1,0 +1,92 @@
+<div
+  class="aurora-wrapper absolute inset-0 hidden md:block fade-in"
+  aria-hidden
+>
+  <div class="aurora-light aurora-light-a"></div>
+  <div class="aurora-light aurora-light-b"></div>
+  <div class="aurora-light aurora-light-c"></div>
+  <div class="aurora-light aurora-light-d"></div>
+</div>
+
+<style>
+  .aurora-wrapper {
+    background: linear-gradient(rgb(42, 42, 98), 10%, rgb(22, 22, 43));
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .aurora-light {
+    position: fixed;
+    filter: blur(4rem);
+    opacity: 0.4;
+  }
+
+  .aurora-light-a {
+    border-radius: 100%;
+    width: 38rem;
+    height: 38rem;
+    background-color: #242e61;
+    right: -4rem;
+    top: -20rem;
+    z-index: 3;
+    animation: fly 104s linear infinite, flicker 31s infinite;
+  }
+
+  .aurora-light-b {
+    width: 30rem;
+    height: 26rem;
+    border-radius: 100%;
+    background-color: #381d3f;
+    bottom: -2rem;
+    left: 5rem;
+    animation: fly 64s linear infinite reverse;
+  }
+
+  .aurora-light-c {
+    border-radius: 100%;
+    width: 26rem;
+    height: 26rem;
+    bottom: -5rem;
+    right: -6rem;
+    background-color: #412032;
+    animation: fly 40s linear infinite;
+  }
+
+  .aurora-light-d {
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+    top: -5rem;
+    left: 50%;
+    background-color: #225652;
+    animation: fly 20s linear infinite reverse, flicker 7s infinite -4s;
+  }
+
+  @keyframes fly {
+    0% {
+      transform: rotate(0) translate(0);
+    }
+
+    50% {
+      transform: rotate(0.5turn) translate(19rem);
+    }
+
+    100% {
+      transform: rotate(1turn) translate(0);
+    }
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.3;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
