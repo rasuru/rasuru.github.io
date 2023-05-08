@@ -16,6 +16,7 @@ import TelegramLogo from "../components/TelegramLogo.astro";
 import ReactLogo from "../components/ReactLogo.astro";
 
 const emailAddress = "rasuru@protonmail.com";
+const emailLink = `mailto:${emailAddress}`;
 ---
 
 <Layout title="Rasul Temirzhan">
@@ -140,13 +141,13 @@ const emailAddress = "rasuru@protonmail.com";
       <p class="mb-4">
         You can send me an email at <a
           class="underline hover:text-indigo-100"
-          href=`mailto://${emailAddress}`>{emailAddress}</a
+          href={emailLink}>{emailAddress}</a
         >.
       </p>
 
       <div class="sm:flex sm:space-x-4 space-y-4 sm:space-y-0">
         <a
-          href="mailto://rasuru@protonmail.com"
+          href={emailLink}
           class="text-center flex-grow flex-shrink-0 block px-2 py-4 md:p-8 bg-indigo-600 rounded-md md:text-xl font-medium hover:bg-indigo-500 transition-colors"
         >
           <AtSymbolIcon
